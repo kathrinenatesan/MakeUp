@@ -8,11 +8,11 @@ export default {
     extend: {
       colors: {
         bg: '#AA767C',
-        surface: '#FFA686',
-        accent: '#FEC196',
+        surface: '#63474D',
+        accent: '#f8c2ae',
         'accent-soft': '#E8C4A0',
-        'text-primary': '#F5F0EB',
-        'text-muted': '#FEC196',
+        'text-primary': '#FEC196',
+        'text-muted': '#F5F0EB'
       },
       fontFamily: {
         display: ['DM Serif Display', 'serif'],
