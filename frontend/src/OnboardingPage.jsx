@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import MonkScaleSelector from './MonkShadeSelector'
 import UndertoneQuiz from './UndertoneQuiz'
+import HomePage from './HomePage'
 
 function OnboardingPage() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,9 +20,9 @@ function OnboardingPage() {
     let maxCount = 0;
     let mostCommonUndertone = null;
 
-    for (const undertone in undertoneCounts) {
-        if (undertoneCounts[undertone] > maxCount) {
-            maxCount = undertoneCounts[undertone];
+    for (const undertone in counts) {
+        if (counts[undertone] > maxCount) {
+            maxCount = counts[undertone];
             mostCommonUndertone = undertone;
         }
     }
