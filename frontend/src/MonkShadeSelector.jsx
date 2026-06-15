@@ -16,24 +16,22 @@ const monkShades = [
 ]
 
 function MonkScaleSelector({ selectedShade, onShadeSelect }) {
-    const [selectedShade, setSelectedShade] = useState(null);
-
     const handleShadeSelect = (shade) => {
         setSelectedShade(shade);
     }
 
     return (
-        <div className="monk-scale-selector">
-            {monkShades.map((shade) => (
-                <div
-                    key={shade.id}
-                    style={{ backgroundColor: shade.color }}
-                    onClick={() => handleShadeSelect(shade)}
-                    className={`w-10 h-10 rounded-full border-2 
-                    ${selectedShade?.id === shade.id ? 'border-white' : 'border-transparent'}`}
-                />
-            ))}
-        </div>
+    <div className="flex flex-wrap gap-3 justify-center">
+        {monkShades.map((shade) => (
+        <div
+            key={shade.id}
+            style={{ backgroundColor: shade.color }}
+            onClick={() => onShadeSelect(shade)}
+            className={`w-12 h-12 rounded-full cursor-pointer border-2 transition-all
+            ${selectedShade?.id === shade.id ? 'border-white scale-110' : 'border-transparent'}`}
+        />
+        ))}
+    </div>
     )
 }
 

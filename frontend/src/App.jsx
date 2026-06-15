@@ -1,13 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useState } from 'react';
 import MonkScaleSelector from './MonkShadeSelector';
+import UndertoneQuiz from './UndertoneQuiz';
+import OnboardingPage from './OnboardingPage';
 
 function App() {
   const profile = localStorage.getItem('profile')
-  return profile ? <HomePage /> : <Onboarding />
+  return profile ? <HomePage /> : <OnboardingPage />
 }
 
-export default App
+export default App;
